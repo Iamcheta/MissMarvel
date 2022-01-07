@@ -35,7 +35,7 @@ from marvel.modules.connection import connected
 
 
 PM_START_TEXT = """Hey there! My name is {} - I'm here to help you manage your groups! Hit /help to find out more about how to use me to my full potential.
-Join my [news channel](https://t.me/TheBotsupport) to get information on all the latest updates.
+Join my [news channel](https://t.me/Titaniumarmysupport) to get information on all the latest updates.
 If this bot helped you donate somthing any needed person!
 """
 
@@ -172,8 +172,9 @@ def start(update, context):
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup( 
                 [[InlineKeyboardButton(text="🎉 Add Me", url="t.me/YukoAraki_bot?startgroup=botstart"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")],
-                [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/TheBotSupports")],
-                [InlineKeyboardButton(text="Repo", url="https://github.com/noobanon/missmarvel")]])
+                [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/Titaniumarmysupport")]
+
+	])
             update.effective_message.reply_text(
                 tld(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_ID),
                 disable_web_page_preview=True,
